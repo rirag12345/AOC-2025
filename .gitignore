@@ -1,6 +1,6 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
+!**/src/org.rirag12345.day02.main/**/target/
 !**/src/test/**/target/
 .kotlin
 
@@ -29,7 +29,7 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
-!**/src/main/**/build/
+!**/src/org.rirag12345.day02.main/**/build/
 !**/src/test/**/build/
 
 ### VS Code ###
