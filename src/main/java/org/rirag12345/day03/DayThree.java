@@ -7,12 +7,14 @@ import java.util.Arrays;
 
 public class DayThree {
 	public static int solve() throws IOException {
-		var joltages = Files.readAllLines(Path.of("src/main/java/org/rirag12345/day03/input.txt"));
-		return joltages.stream().map(DayThree::getLargest).reduce(0, Integer::sum);
+		return Files.readAllLines(Path.of("src/main/java/org/rirag12345/day03/input.txt"))
+				.stream()
+				.map(DayThree::getLargest)
+				.reduce(0, Integer::sum);
 	}
 
 	/**
-	 * Sorts a given input String of numbers and return the highest possible joltage
+	 * Sorts a given input String of numbers and returns the highest possible joltage
 	 *
 	 * @param input the input String e.g. "811111111111119"
 	 * @return the highest possible value e.g. "89"
@@ -27,12 +29,13 @@ public class DayThree {
 			for (int j = i + 1; j < values.size(); j++) {
 				var first = values.get(i);
 				var second = values.get(j);
+				// Combine the two highest digits into a two-digit number
 				if ((first * 10 + second) > result) {
 					result = first * 10 + second;
 				}
 			}
 		}
-		// Combine the two highest digits into a two-digit number
+
 		return result;
 	}
 }
