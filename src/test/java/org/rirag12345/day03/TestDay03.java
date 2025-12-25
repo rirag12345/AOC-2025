@@ -1,7 +1,6 @@
-package day03;
+package org.rirag12345.day03;
 
 import org.junit.jupiter.api.Test;
-import org.rirag12345.day03.DayThree;
 
 import java.io.IOException;
 
