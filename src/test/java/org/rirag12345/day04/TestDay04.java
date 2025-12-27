@@ -10,6 +10,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class TestDay04 {
 	@Test
 	public void testSolve() throws IOException {
-		assertThat(DayFour.solve(), is(9024));
+		assertThat(DayFour.solve(), is(9024L));
 	}
 }
