@@ -22,8 +22,10 @@ public record DaySix() {
             // if the entire column is empty we can skip it
             var isEmpty = column.stream().allMatch(c -> c == ' ');
 
+            // If we hit an empty column, we also know that the current block has ended
             if (isEmpty) {
                 if (!currrentBlockNumbers.isEmpty()) {
+                    // calculate the result for the current block and add it to the total result
                     result = result.add(calculateBlock(currrentBlockNumbers, currentBlockOperation));
                     // reset for the next block
                     currrentBlockNumbers.clear();
